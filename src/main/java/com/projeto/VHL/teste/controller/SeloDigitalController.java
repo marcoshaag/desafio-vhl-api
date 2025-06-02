@@ -22,7 +22,7 @@ public class SeloDigitalController {
     private SeloDigitalService seloDigitalService;
 
     @GetMapping("/entes")
-    public Page<EntesDeclaradosDTO> listarEntesFiltrados(String codigo, String nome, Pageable pageable) throws Exception_Exception {
+    public Page<EntesDeclaradosDTO> listarEntesFiltrados(Long codigo, String nome, Pageable pageable) throws Exception_Exception {
         List<EntesDeclaradosDTO> lista = seloDigitalService.listarEntesDeclarados();
 
         List<EntesDeclaradosDTO> filtrado = lista.stream()
